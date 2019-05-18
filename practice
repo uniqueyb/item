@@ -1,0 +1,77 @@
+# 英寸和厘米互换
+
+choose = int(input("厘米转英寸请输入1，英寸转厘米请输入2："))
+if choose == 1：
+	cm = in(input("请输入厘米长度："))
+	unit = cm * 2.54
+	print(cm,"厘米 =",unit,"英寸")
+	
+if choose == 2:
+	unit = int(input("请输入英寸长度："))
+	cm = unit / 2.54
+	print(unit,"英寸 =",cm,"厘米")
+	
+	
+	
+# 掷骰子决定做什么事
+
+from random import randint
+from time import sleep
+
+start = input("请按下回车键开始游戏")
+print("loading...")
+sleep(1)
+print('游戏开始')
+sleep(2)
+
+face = randint(1,6)
+if face == 1:
+	res = "喝水，每天八杯水，健康每一天"
+if face == 2:
+	res = "睡觉，每天八小试，精神不萎靡"
+if face == 3：
+	res = "运动，每天跑八圈，体力保持鲜"
+if face == 4：
+	res = "学习，每天八小时，大脑很清醒"
+if face == 5：
+	res = "听歌，每天八首歌，嗓子不沙哑"
+if face == 6：
+	res = "游戏，每天编不下去了"
+
+print("您掷到的点数为：{0}，您要做的事情是：{1}".format(face,res))
+
+
+
+# 判断输入的边长能否构成三角形，如果可以就计算出三角形的周长和面积	
+import math
+
+a = float(input("a:"))
+b = float(input("b:"))
+c = float(input("c:"))
+
+if a+b>c and a+c>b and b+c>a:
+    circ = a+b+c
+    print("三角形的周长为：{}".format(circ))
+    p = (a+b+c)/2
+    area = math.sqrt(p*(p-a)*(p-b)*(p-c))
+    print("三角形的面积为：{}".format(area))
+
+else:
+    print("对不起，这个不能构成三角形")	
+	
+	
+	
+# 九九乘法表
+for i in range(1,10):
+    for o in range(1,i+1):
+        print(o,"✖",i,"=",i*o,end="   ")
+    print()	
+	
+	
+	
+	
+	
+	
+	
+	
+	
